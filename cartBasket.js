@@ -1,4 +1,6 @@
- var PizzaOrder = {
+ 
+// js object
+var PizzaOrder = {
       cname: $('#cName').val(),
       uid: userID,
       cEmail: $('#cEmail').val(),
@@ -21,6 +23,7 @@ function AddPizzaToLcalStorage(PizzaOrder){
           var orderList = [];
           
       orderList.push(pizzaObject);
+       // making js object to JSON object
     var x = JSON.stringify(orderList);
     localStorage.setItem('orderArray', x); 
         
@@ -46,6 +49,7 @@ function AddPizzaToLcalStorage(PizzaOrder){
 
 function getPizzafromLS(){
     /*-----------------------------------------*/
+ // cahning JSON object to js object 
       var order = JSON.parse(localStorage.getItem('orderArray'));
     console.log('array after parsing json:' + order);
           $('#localS').val(' '); 
