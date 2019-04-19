@@ -1,4 +1,5 @@
- 
+ // function that capture input fields
+function catpureInputs(){  // An arbitrary function so define it in any way you want  
 // js object
 var PizzaOrder = {
       cname: $('#cName').val(),
@@ -8,7 +9,8 @@ var PizzaOrder = {
       cOrder: $('#orderDetails').val(),
       orderStatus: '1'
   };
-    
+ AddPizzaToLcalStorage(PizzaOrder);  
+}
 
 
 
