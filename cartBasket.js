@@ -65,4 +65,4 @@ $('#localS').append(toTextArea);
 /*-----------------------------------------*/                  
 }
 
-getPizzafromLS()
+getPizzafromLS();
