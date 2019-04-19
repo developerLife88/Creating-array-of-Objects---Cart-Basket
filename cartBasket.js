@@ -1,6 +1,6 @@
  // function that capture input fields
 function catpureInputs(){  // An arbitrary function so define it in any way you want  
-// js object
+// javascripts object
 var PizzaOrder = {
       cname: $('#cName').val(),
       uid: userID,
@@ -25,7 +25,7 @@ function AddPizzaToLcalStorage(PizzaOrder){
           var orderList = [];
           
       orderList.push(pizzaObject);
-       // making js object to JSON object
+       // Converting the javascripts object to a JSON object
     var x = JSON.stringify(orderList);
     localStorage.setItem('orderArray', x); 
         
@@ -36,8 +36,9 @@ function AddPizzaToLcalStorage(PizzaOrder){
       //adding a new order to the list
       order.push(pizzaObject);
 
-      // add it as JSON object
+       // Converting the javascripts object to a JSON object
        var x = JSON.stringify(order);
+    // saving the array again with the same key ('orderArray')
     localStorage.setItem('orderArray', x); 
         
   }
@@ -51,7 +52,7 @@ function AddPizzaToLcalStorage(PizzaOrder){
 
 function getPizzafromLS(){
     /*-----------------------------------------*/
- // cahning JSON object to js object 
+// Converting JSON object to a javascripts object
       var order = JSON.parse(localStorage.getItem('orderArray'));
     console.log('array after parsing json:' + order);
           $('#localS').val(' '); 
